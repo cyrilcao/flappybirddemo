@@ -1,0 +1,28 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- 天空背景 -->
+  <rect width="800" height="600" fill="#87CEEB"/>
+  
+  <!-- 远处的云朵 -->
+  <g fill="#FFFFFF">
+    <circle cx="100" cy="100" r="20"/>
+    <circle cx="120" cy="100" r="25"/>
+    <circle cx="140" cy="100" r="20"/>
+    
+    <circle cx="400" cy="150" r="25"/>
+    <circle cx="425" cy="150" r="30"/>
+    <circle cx="450" cy="150" r="25"/>
+    
+    <circle cx="700" cy="80" r="20"/>
+    <circle cx="725" cy="80" r="25"/>
+    <circle cx="750" cy="80" r="20"/>
+  </g>
+  
+  <!-- 地面 -->
+  <rect y="500" width="800" height="100" fill="#8B4513"/>
+  
+  <!-- 草地纹理 -->
+  <g fill="#90EE90">
+    <rect y="490" width="800" height="20"/>
+    <path d="M0,490 L800,490 L800,500 Q400,480 0,500 Z"/>
+  </g>
+</svg> 

@@ -1,0 +1,37 @@
+<view class="game-container">
+  <canvas 
+    type="2d" 
+    id="gameCanvas" 
+    bindtouchstart="handleTap"
+    style="width: 100vw; height: 100vh; display: block;">
+  </canvas>
+  
+  <view class="score-display">
+    <text class="score-value">{{score || 0}}</text>
+  </view>
+  
+  <view class="start-tip" wx:if="{{!isPlaying && !gameOver}}">
+    <view class="tip-text">点击屏幕开始游戏</view>
+    <view class="tip-sub-text">点击屏幕让小鸟飞翔</view>
+  </view>
+
+  <view class="game-over-container" wx:if="{{gameOver}}">
+    <view class="game-over-mask"></view>
+    <view class="game-over">
+      <view class="game-over-text">游戏结束</view>
+      <view class="final-score">得分: {{score}}</view>
+      <view class="high-score">最高分: {{highScore}}</view>
+      <button class="restart-btn" bindtap="restartGame">重新开始</button>
+    </view>
+  </view>
+
+  <view class="pause-btn" bindtap="togglePause" wx:if="{{isPlaying && !gameOver}}">
+    <text class="{{isPaused ? 'icon-play' : 'icon-pause'}}"></text>
+  </view>
+
+  <view class="pause-menu" wx:if="{{isPaused}}">
+    <view class="pause-title">游戏暂停</view>
+    <button class="resume-btn" bindtap="togglePause">继续游戏</button>
+    <button class="restart-btn" bindtap="restartGame">重新开始</button>
+  </view>
+</view> 
